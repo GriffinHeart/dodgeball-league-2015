@@ -34,7 +34,7 @@ section.jumbotron {
   background: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
-    ), url('/dodgeball-league-2015/assets/images/jumbo.jpg') no-repeat center center;
+    ), url('/assets/images/jumbo.jpg') no-repeat center center;
   background-size: cover;
   text-align: center;
   position:relative;
@@ -108,6 +108,24 @@ section.content {
       }
     }
   }
+}
+
+footer {
+  footer-content {
+    min-height: 64px;
+    padding: 0 16px 16px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+
+    div:not(:last-child) {
+      margin-right: 24px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
 }
 
 /**
