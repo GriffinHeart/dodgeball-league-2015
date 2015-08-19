@@ -110,11 +110,12 @@ section.content {
   }
 }
 
+.s32 {
+  font-size: 2em;
+}
 footer {
-  footer-content {
+  .footer-content {
     min-height: 64px;
-    padding: 0 16px 16px;
-    background-color: #fff;
     color: rgba(0, 0, 0, 0.54);
     font-size: 14px;
 

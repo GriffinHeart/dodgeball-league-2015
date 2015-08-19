@@ -40,3 +40,15 @@ md-content
                 td
                   span.versus VS
                 td {{match.second}}
+  footer(layout='column' layout-align='end')
+    md-toolbar.md-primary
+      .md-toolbar-tools.footer-content
+        div(layout='row', layout-align='start center')
+          span Made with&nbsp;
+          md-icon.md-accent(md-font-library="material-icons", aria=label='love') favorite
+          span &nbsp;by Hugo Almeida
+        div(layout='row', layout-align='start center')
+          md-button.md-icon-button(href="https://github.com/GriffinHeart/dodgeball-league-2015/tree/master"
+            target="_blank"
+            aria-label='github') 
+              md-icon.fa.fa-2x(md-font-icon="fa-github")
