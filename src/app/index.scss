@@ -110,9 +110,10 @@ section.content {
   }
 }
 
-.s32 {
-  font-size: 2em;
+.md-tab.md-focused {
+  color: rgba(0,0,0,0.54);
 }
+
 footer {
   .footer-content {
     min-height: 64px;
