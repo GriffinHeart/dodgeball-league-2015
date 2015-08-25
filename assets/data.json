@@ -2,19 +2,19 @@
   "league": [
     {
       "name": "DieNasty",
-      "points": 3
+      "points": 4
     },
     {
       "name": "Dodgers",
-      "points": 1
+      "points": 2
     },
     {
       "name": "Purple Cobras",
-      "points": 3
+      "points": 8
     },
     {
       "name": "Team Awesome!",
-      "points": 5
+      "points": 13
     }
   ],
   "schedule": [
