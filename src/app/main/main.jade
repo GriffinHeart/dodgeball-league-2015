@@ -1,93 +1,9 @@
 md-content
-  section.jumbotron
-    .text
-      h1 Tokyo Dodgeball League 2015!
-  md-toolbar(layout='row', layout-align='space-around center')
-    section(flex='20')
-    section(flex, layout='row', layout-align='space-around center')
-      md-button.md-raised.md-accent(href='#', scroll-to="announcements") News 
-      md-button.md-raised.md-accent(href='#', scroll-to="league") League
-      md-button.md-raised.md-accent(href='#', scroll-to="schedule") Schedule
-      md-button.md-raised.md-accent(href='#', scroll-to="location") Location
-    section(flex='20')
+  include ./header.jade
   div(layout)
     div(flex-gt-sm='20')
     md-content(flex, layout='column')
-      section.md-whiteframe-z1.content#news
-        md-toolbar.md-primary.md-default-theme
-          .md-toolbar-tools
-            h3 News 
-        md-subheader.md-accent Latest announcements 
-        md-content.md-padding
-          md-tabs.md-accent.md-hue-2(md-dynamic-height)
-            md-tab
-              md-tab-label English
-              md-tab-body
-                md-content.md-padding
-                  p Hi Everybody, this is super important:
-                  p We had a scare at dodgeball on Monday night. Everyone is fine, and thank you all for helping out and being understanding.
-                  p My number 1 concern with dodgeball has always been safety. (Number 2 is fun, number 3 is looking sexy). That's why we always play a couple meters from the piano, and that's why I'm always yelling at you to be careful during the opening rush.
-                  p So if you have a health condition that could be affected by playing dodgeball it is IMPERATIVE that you let me know.
-                  p Severe asthma, a heart condition, extreme bee allergies, etc. - if your life could potentially be at risk tell me ASAP. We need to be able to handle the situation appropriately.
-                  p (Also, please don't be too embarrassed to tell me, I've done way too many embarrassing things to care.)
-                  p -Will
-            md-tab
-              md-tab-label 日本語 
-              md-tab-body
-                md-content.md-padding
-                  p みんな、とても大切なお願いがあります。
-                  p 前回のドッジボールでちょっとびっくりすることが起きたけど、みんな大丈夫です。思いやりを持って対応してくれて、みんなどうもありがとう。ドッジボールをやっていく上で一番大事にしているのは、常に安全に気をつけること。
-                  p （２番目は楽しむこと、３番目はセクシーに決めること）だからいつもピアノからは離れてもらうし、特にゲームの最初はみんな頑張りすぎちゃうから落ち着くように声をかけてる。
-                  p もし、ドッジボールに参加することである症状が発生する可能性がある人は、必ず僕に知らせてほしい。重度の喘息、心臓の弱い人、ハチとか重度のアレルギー、その他運営側が知っておかなければいけない病気を持っている人は、もし何かが起きた時に僕たちがどう対処すれば良いか教えて欲しい。（言いづらいと思わないで。僕はというと、もう恥は捨てたので笑）
-                  p -ウィル
-      section.md-whiteframe-z1.content#league
-        md-toolbar.md-primary.md-default-theme
-          .md-toolbar-tools
-            h3 League
-        md-subheader.md-accent Current Standings
-        md-content.content(layout layout-align='center center')
-          md-data-table-container
-            table(md-data-table)
-              thead
-                tr
-                  th(name='Team')
-                  th(numeric name='Points')
-              tbody
-                tr(ng-repeat="team in main.data.league | orderBy: '- points'")
-                  td {{team.name}}
-                  td {{team.points}} 
-
-      section.md-whiteframe-z1.content#schedule
-        md-toolbar.md-primary.md-default-theme
-          .md-toolbar-tools
-            h3 Schedule 
-        md-subheader.md-accent Matches
-        md-content.content(layout layout-padding layout-align='center center')
-          md-data-table-container.schedule
-            table(md-data-table)
-              thead
-              tbody
-                tr(ng-repeat='match in main.data.schedule')
-                  td {{match.date}}
-                  td {{match.first}}
-                  td
-                    span.versus VS
-                  td {{match.second}}
-        md-subheader.md-accent Location
-        md-content.content#location(layout='column' layout-padding layout-align='center center')
-          md-content 
-            p Address: Tenjin Elementary School 6 Chome-14-2 Shinjuku, Tokyo 160-0022, Japan
-          iframe(width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Tenjin%20Elementary%20School%2C%20Shinjuku%2C%20Tokyo%2C%20Japan&key=AIzaSyB1KPegos46vtggJl7uTUmZSvt24VY18FY" allowfullscreen)
+      include ./content.jade
     div(flex-gt-sm='20')
   footer(layout='column' layout-align='end')
-    md-toolbar.md-primary
-      .md-toolbar-tools.footer-content
-        div(layout='row', layout-align='start center')
-          span Made with&nbsp;
-          md-icon.material-icons.md-accent(aria=label='love') favorite
-          span &nbsp;by Hugo Almeida
-        div(layout='row', layout-align='start center')
-          md-button.md-icon-button(href="https://github.com/GriffinHeart/dodgeball-league-2015/tree/master"
-            target="_blank"
-            aria-label="github") 
-              md-icon.fa.fa-2x(md-font-icon="fa-github")
+    include ./footer.jade
